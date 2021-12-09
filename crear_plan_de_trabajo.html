@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS AQUÍ -->
+        <link rel="stylesheet" href="static/css/bulma.min.css">
+        <link rel="stylesheet" href="static/css/custom.css">
+        <!-- JS AQUÍ -->
+        <script defer src="static/js/alpine.min.js"></script>
+        <script defer src="static/js/fontawesome.min.js"></script>
+
+        <title>Departamento de informática</title>
+    </head>
+
+    <body>
+        <!-- Empeiza la barra de navegación -->
+        <nav class="navbar is-success" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <h1 class="title">Info Gest</h1>
+                </a>
+
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbar-main">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbar-main" class="navbar-menu">
+                <div class="navbar-start">
+
+                    <a href="crear_plan_de_trabajo.html" class="navbar-item">
+                        Crear plan de trabajo
+                    </a>
+
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        Camila Nápoles
+                    </div>
+                    <div class="navbar-item">
+
+                        <figure class="image">
+                            <img class="is-rounded" src="static/img/camila.jpg">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Termina la barra de navegación -->
+
+        <!-- Empieza el contenido -->
+        <div class="container is-fluid">
+            <div class="columns is-centered">
+                <div class="column">
+                    <div class="box">
+                        <form method="POST" action="">
+                                <div class="field">
+                                    <label class="label">Plan de trabajo</label>
+                                    <div class="control">
+                                        <textarea id="Plan de trabajo" class="textarea" placeholder="Plan de trabajo"></textarea>
+                                    </div>
+                                </div>
+        
+                                <div class="field">
+                                    <label class="label">Mes</label>
+                                    <div class="control">
+                                        <div class="select">
+                                            <select>
+                                                <option>Enero</option>
+                                                <option>Febrero</option>
+                                                <option>Marzo</option>
+                                                <option>Abril</option>
+                                                <option>Mayo</option>
+                                                <option>Junio</option>
+                                                <option>Julio</option>
+                                                <option>Agosto</option>
+                                                <option>Septiembre</option>
+                                                <option>Octubre</option>
+                                                <option>Noviembre</option>
+                                                <option>Diciembre</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="field is-grouped">
+                                    <div class="control">
+                                        <button class="button is-link">Guardar</button>
+                                    </div>
+                                    <div class="control">
+                                        <button class="button is-text">Cancelar</button>
+                                    </div>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Termina el contenido -->
+        <div class=" custom-footer box has-background-success">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>Info Gest</strong> by <strong>Daymis Estrada Elias, Arletis Dayana Espinosa Ortis, Fernando
+                        Calvi</strong> y <strong>Jesús Enrique Fuentes </strong>.
+                </p>
+            </div>
+        </div>
+        <!-- El JS que programamos nosotros -->
+        <script src="static/js/custom.js"></script>
+    </body>
+
+</html>

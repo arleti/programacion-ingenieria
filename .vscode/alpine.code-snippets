@@ -1,0 +1,144 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Alpine: x-data":{
+		"scope": "html,django-html",
+		"prefix": "x:data",
+		"body":["<div x-data=\"{ open: false }\"> \n ... \n</div>"],
+		"description": "Declare a new Alpine component and its data for a block of HTML"		
+	},
+	"Alpine: x-bind":{
+		"scope": "html,django-html",
+		"prefix": "x:bind",
+		"body":["<div x-bind:class=\"! open ? 'hidden' : ''\"> \n ... \n</div>"],
+		"description": "Dynamically set HTML attributes on an element"
+	},
+	"Alpine: x-on":{
+		"scope": "html,django-html",
+		"prefix": "x:on",
+		"body":["<button x-on:click=\"open = ! open\"> \n Toggle \n</div>"],
+		"description": "Listen for browser events on an element"
+	},
+	"Alpine: x-text":{
+		"scope": "html,django-html",
+		"prefix": "x:text",
+		"body":["<div>\nCopyright ©\n<span x-text=\"new Date().getFullYear()\"></span> \n </div>"],
+		"description": "Set the text content of an element"
+	},
+	"Alpine: x-html":{
+		"scope": "html,django-html",
+		"prefix": "x:html",
+		"body":["<div x-html=\"(await axios.get('/some/html/partial')).data\"> \n ... \n</div>"],
+		"description": "Set the inner HTML of an element"
+	},
+	"Alpine: x-model":{
+		"scope": "html,django-html",
+		"prefix": "x:model",
+		"body":["<div x-data=\"{ search: '' }\"> \n <input type=\"text\" x-model=\"search\"> \n\n Searching for: <span x-text=\"search\"></span> \n</div>"],
+		"description": "Synchronize a piece of data with an input element"
+	},
+	"Alpine: x-show":{
+		"scope": "html,django-html",
+		"prefix": "x:show",
+		"body":["<div x-show=\"open\"> \n ... \n</div>"],
+		"description": "Toggle the visibility of an element"
+	},
+	"Alpine: x-transition":{
+		"scope": "html,django-html",
+		"prefix": "x:transition",
+		"body":["<div x-show=\"open\" x-transition> \n ... \n</div>"],
+		"description": "Transition an element in and out using CSS transitions"
+	},
+	"Alpine: x-for":{
+		"scope": "html,django-html",
+		"prefix": "x:for",
+		"body":["<template x-for=\"post in posts\"> \n <h2 x-text=\"post.title\"></h2> \n </template>"],
+		"description": "Repeat a block of HTML based on a data set"
+	},
+	"Alpine: x-if":{
+		"scope": "html,django-html",
+		"prefix": "x:if",
+		"body":["<template x-if=\"open\"> \n <div>...</div> \n </template>"],
+		"description": "Conditionally add/remove a block of HTML from the page entirely."
+	},
+	"Alpine: x-init":{
+		"scope": "html,django-html",
+		"prefix": "x:init",
+		"body":["<div x-init=\"date = new Date()\"></div>"],
+		"description": "Run code when an element is initialized by Alpine"
+	},	
+	"Alpine: x-effect":{
+		"scope": "html,django-html",
+		"prefix": "x:effect",
+		"body":["<div x-effect=\"console.log('Count is '+count)\"></div>"],
+		"description": "Execute a script each time one of its dependancies change"
+	},
+	"Alpine: x-ref":{
+		"scope": "html,django-html",
+		"prefix": "x:ref",
+		"body":["<input type=\"text\" x-ref=\"content\"> \n\n <button x-on:click=\"navigator.clipboard.writeText($refs.content.value)\"> \n Copy \n </button>"],
+		"description": "Reference elements directly by their specified keys using the $refs magic property"
+	},
+	"Alpine: x-cloak":{
+		"scope": "html,django-html",
+		"prefix": "x:cloak",
+		"body":["<div x-cloak>\n...\n</div>"],
+		"description": "Hide a block of HTML until after Alpine is finished initializing its contents"
+	},	
+	"Alpine: x-ignore":{
+		"scope": "html,django-html",
+		"prefix": "x:ignore",
+		"body":["<div x-ignore>\n...\n</div>"],
+		"description": "Prevent a block of HTML from being initialized by Alpine"
+	},
+	"Alpine: $store":{
+		"scope": "html,django-html",
+		"prefix": "$store",
+		"body":["<h1 x-text=\"$store.site.title\"></h1>"],
+		"description": "Access a global store registered using Alpine.store(...)"
+	},		
+	"Alpine: $el":{
+		"scope": "html,django-html",
+		"prefix": "$el",
+		"body":["<div x-init=\"new Pikaday($el)\"></div>"],
+		"description": "Reference the current DOM element"
+	},
+	"Alpine: $dispatch":{
+		"scope": "html,django-html",
+		"prefix": "$dispatch",
+		"body":["<div x-on:notify=\"...\">\n <button x-on:click=\"$dispatch('notify')\">...</button> \n</div>"],
+		"description": "Dispatch a custom browser event from the current element."
+	},
+	"Alpine: $watch":{
+		"scope": "html,django-html",
+		"prefix": "$watch",
+		"body":["<div x-init=\"$watch('count', value => {\n console.log('count is ' + value))\"\n}\">...</div>"],
+		"description": "Watch a piece of data and run the provided callback anytime it changes."
+	},
+	"Alpine: $refs":{
+		"scope": "html,django-html",
+		"prefix": "$refs",
+		"body":["<div x-init=\"$refs.button.remove()\">\n <button x-ref=\"button\">Remove Me</button>\n</div>"],
+		"description": "Reference an element by key (specified using x-ref)"
+	},
+	"Alpine: $nextTick":{
+		"scope": "html,django-html",
+		"prefix": "$nextTick",
+		"body":["<div>\n x-text=\"count\"\n x-text=\"$nextTick(() => {\"\n  console.log('count is ' + $el.textContent)\n })\n>...</div>"],
+		"description": "Wait until the next \"tick\" (browser paint) to run a bit of code"
+	},
+}
